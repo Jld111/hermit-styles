@@ -1,37 +1,90 @@
-:root, html.__fb-dark-mode, [data-color-scheme="dark"] {
-    --surface-background: #000000 !important;
-    --primary-background: #000000 !important;
-    --secondary-background: #000000 !important;
-    --card-background: #000000 !important;
-    --wash: #000000 !important;
-    --web-wash: #000000 !important;
-    --header-background: #000000 !important;
-    --nav-bar-background: #000000 !important;
-    --popover-background: #050505 !important;
-    --comment-background: #0a0a0a !important;
-    --divider: #181818 !important;
-}
-body, div[role="main"], div[data-pagelet="root"], div[role="feed"] {
-    background-color: #000000 !important;
-}
-div[role="feed"] > div, div[role="article"], div[data-pagelet="FeedUnit"] {
-    background-color: #000000 !important;
-    border-bottom: 1px solid #141414 !important;
-}
-header, div[role="banner"], div[role="navigation"] {
-    background-color: #000000 !important;
-}
-/* --- Facebook Ad & Widget Declutter --- */
+/* ==========================================================================
+   FACEBOOK DESKTOP TRUE AMOLED #000000 (CLEANED & VALIDATED)
+   ========================================================================== */
 
-/* 1. Hide Right-Rail Sponsored Ads */
-div[data-pagelet="RightRail"] div:has(a[href*="ads"]),
-div[data-pagelet="RightRail"] div:has(span:contains("Sponsored")),
-div[data-pagelet="RightRail"] > div:first-child {
-  display: none !important;
+/* 1. Global CSS Variable Overrides */
+:root,
+html,
+body,
+.__fb-dark-mode,
+[data-color-scheme="dark"] {
+  --surface-background: #000000 !important;
+  --primary-background: #000000 !important;
+  --secondary-background: #000000 !important;
+  --card-background: #000000 !important;
+  --card-background-flat: #000000 !important;
+  --wash: #000000 !important;
+  --web-wash: #000000 !important;
+  --header-background: #000000 !important;
+  --nav-bar-background: #000000 !important;
+  --popover-background: #050505 !important;
+  --comment-background: #0a0a0a !important;
+  --divider: #181818 !important;
+  --hover-overlay: rgba(255, 255, 255, 0.05) !important;
 }
 
-/* 2. Hide Feed "Reels and Short Videos" Trays (Saves Feed Scrolling) */
+/* 2. Full Page Canvas & Base Layout */
+html,
+body,
+#root,
+#mount_0_0,
+div[role="main"],
+div[data-pagelet="root"],
+div[data-pagelet="page"] {
+  background-color: #000000 !important;
+}
+
+/* 3. Left & Right Desktop Rails (Turns Off Gray Sidebars) */
+div[data-pagelet="LeftRail"],
+div[data-pagelet="RightRail"],
+div[role="navigation"],
+div[role="complementary"],
+div[aria-label="Facebook"] > div {
+  background-color: #000000 !important;
+}
+
+/* 4. Top Navigation Bar */
+header,
+div[role="banner"],
+div[data-pagelet="NavBar"] {
+  background-color: #000000 !important;
+  border-bottom: 1px solid #141414 !important;
+}
+
+/* 5. Center Feed & Story Units */
+div[role="feed"] > div,
+div[role="article"],
+div[data-pagelet="FeedUnit"],
+div[data-pagelet="Stories"] {
+  background-color: #000000 !important;
+  border-bottom: 1px solid #141414 !important;
+}
+
+/* 6. Declutter & Ad Removal (Valid Standard CSS Syntax) */
+div[data-pagelet="RightRail"] div:has(a[href*="/ads/"]),
+div[data-pagelet="RightRail"] div:has(a[href*="facebook.com/ads/"]),
+div[data-pagelet="RightRail"] div[aria-label="Sponsored"],
 div[data-pagelet="Reels_Feed"],
 div[aria-label="Reels and short videos"] {
   display: none !important;
+}
+
+/* 7. Slim AMOLED Scrollbars */
+* {
+  scrollbar-width: thin !important;
+  scrollbar-color: #222 #000 !important;
+}
+
+::-webkit-scrollbar {
+  width: 5px !important;
+  height: 5px !important;
+}
+
+::-webkit-scrollbar-track {
+  background: #000000 !important;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1c1c1c !important;
+  border-radius: 3px !important;
 }
