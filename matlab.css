@@ -1,0 +1,13 @@
+body, html, .mw-theme-dark, [data-theme="dark"], 
+.main-app-container, .toolstrip, .command-window, 
+.file-browser, .workspace-browser, .d-editor, .monaco-editor, .monaco-editor-background {
+    background-color: #000000 !important;
+}
+.d-pane, .tab-strip, .mw-tab-bar {
+    background-color: #050505 !important;
+    border-color: #141414 !important;
+}
+canvas, svg, .matlab-figure, img {
+    background-color: unset !important;
+    filter: none !important;
+}
