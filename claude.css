@@ -8,3 +8,8 @@ fieldset, .border-border-300 {
     background-color: #050505 !important;
     border-color: #141414 !important;
 }
+/* --- Hide Claude Upgrade Pill --- */
+header div:has(a[href*="/settings/billing"]),
+div:has(> a[href*="/upgrade"]) {
+  display: none !important;
+}
