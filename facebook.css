@@ -1,0 +1,23 @@
+:root, html.__fb-dark-mode, [data-color-scheme="dark"] {
+    --surface-background: #000000 !important;
+    --primary-background: #000000 !important;
+    --secondary-background: #000000 !important;
+    --card-background: #000000 !important;
+    --wash: #000000 !important;
+    --web-wash: #000000 !important;
+    --header-background: #000000 !important;
+    --nav-bar-background: #000000 !important;
+    --popover-background: #050505 !important;
+    --comment-background: #0a0a0a !important;
+    --divider: #181818 !important;
+}
+body, div[role="main"], div[data-pagelet="root"], div[role="feed"] {
+    background-color: #000000 !important;
+}
+div[role="feed"] > div, div[role="article"], div[data-pagelet="FeedUnit"] {
+    background-color: #000000 !important;
+    border-bottom: 1px solid #141414 !important;
+}
+header, div[role="banner"], div[role="navigation"] {
+    background-color: #000000 !important;
+}
