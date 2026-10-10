@@ -1,0 +1,93 @@
+/* ==========================================================================
+   HCMUS MOODLE (courses.hcmus.edu.vn) TRUE AMOLED #000000 PURE BLACK
+   ========================================================================== */
+
+/* 1. Global Canvas & Background Overrides */
+html,
+body,
+#page-wrapper,
+#page,
+#region-main,
+#region-main-box,
+.bg-white,
+.bg-light {
+  background-color: #000000 !important;
+  color: #e4e6eb !important;
+}
+
+/* 2. Top Navigation Bar */
+.navbar,
+.fixed-top,
+.navbar-bootswatch,
+nav.navbar {
+  background-color: #000000 !important;
+  border-bottom: 1px solid #181818 !important;
+}
+
+/* 3. Course Cards, Sections & Panels */
+.card,
+.card-body,
+.block,
+.section,
+.course-content,
+.activity-item,
+li.activity {
+  background-color: #000000 !important;
+  border-color: #141414 !important;
+  color: #e4e6eb !important;
+}
+
+/* 4. Left & Right Navigation Drawers (Course Index & Blocks) */
+.drawer,
+.drawer-content,
+#theme_boost-drawers-courseindex,
+#theme_boost-drawers-blocks {
+  background-color: #000000 !important;
+  border-color: #141414 !important;
+}
+
+/* 5. Tables, Assignment Submissions & Grade Grids */
+table,
+.generaltable,
+.table,
+.table-striped tbody tr:nth-of-type(odd) {
+  background-color: #000000 !important;
+  color: #e4e6eb !important;
+  border-color: #1a1a1a !important;
+}
+td, th {
+  border-color: #181818 !important;
+}
+
+/* 6. Text Legibility & Links (Preserves readability) */
+a, .nav-link {
+  color: #58a6ff !important;
+}
+p, span, h1, h2, h3, h4, h5, h6 {
+  color: #e4e6eb !important;
+}
+
+/* 7. Preserve Status Badges, Icons & Submission Alerts */
+.badge,
+.alert,
+img.activityicon,
+.icon {
+  filter: none !important;
+}
+
+/* 8. Slim AMOLED Scrollbars */
+* {
+  scrollbar-width: thin !important;
+  scrollbar-color: #222 #000 !important;
+}
+::-webkit-scrollbar {
+  width: 5px !important;
+  height: 5px !important;
+}
+::-webkit-scrollbar-track {
+  background: #000000 !important;
+}
+::-webkit-scrollbar-thumb {
+  background: #1c1c1c !important;
+  border-radius: 3px !important;
+}
