@@ -21,3 +21,17 @@ div[role="feed"] > div, div[role="article"], div[data-pagelet="FeedUnit"] {
 header, div[role="banner"], div[role="navigation"] {
     background-color: #000000 !important;
 }
+/* --- Facebook Ad & Widget Declutter --- */
+
+/* 1. Hide Right-Rail Sponsored Ads */
+div[data-pagelet="RightRail"] div:has(a[href*="ads"]),
+div[data-pagelet="RightRail"] div:has(span:contains("Sponsored")),
+div[data-pagelet="RightRail"] > div:first-child {
+  display: none !important;
+}
+
+/* 2. Hide Feed "Reels and Short Videos" Trays (Saves Feed Scrolling) */
+div[data-pagelet="Reels_Feed"],
+div[aria-label="Reels and short videos"] {
+  display: none !important;
+}
