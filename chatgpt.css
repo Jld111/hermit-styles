@@ -15,3 +15,18 @@ header, form, [class*="bg-token-main-surface"] {
 [data-message-author-role="user"] {
     background-color: #141414 !important;
 }
+/* --- Hide ChatGPT Upsell & Disclaimers --- */
+
+/* Hide Bottom Left "Claim offer" banner */
+div:has(> button[data-testid*="pricing"]),
+div:has(> a[href*="/pricing"]),
+div[class*="sidebar"] div:has(span:contains("Claim offer")),
+div:has(> span:contains("Free offer")) {
+  display: none !important;
+}
+
+/* Hide Bottom Disclaimer ("ChatGPT can make mistakes...") for cleaner canvas */
+main > div:last-child > div:last-child > div:last-child > div:last-child {
+  opacity: 0 !important;
+  pointer-events: none !important;
+}
