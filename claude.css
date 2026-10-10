@@ -1,0 +1,10 @@
+html, body, #root, main {
+    background-color: #000000 !important;
+}
+.bg-bg-000, .bg-bg-100, .bg-bg-200, .bg-bg-300, .bg-bg-400, .bg-bg-500 {
+    background-color: #000000 !important;
+}
+fieldset, .border-border-300 {
+    background-color: #050505 !important;
+    border-color: #141414 !important;
+}
