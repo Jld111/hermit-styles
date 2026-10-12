@@ -2,7 +2,7 @@
    CONSUMER GEMINI (gemini.google.com) TRUE AMOLED #000000 (OPTIMIZED)
    ========================================================================== */
 
-/* 1. Apply variables to root instead of wildcard (*) to prevent CPU layout thrashing during text streaming */
+/* 1. Apply variables to root and nuke landing page gradients */
 :root, body, chat-app {
     --md-sys-color-background: #000000 !important;
     --md-sys-color-surface: #000000 !important;
@@ -14,9 +14,10 @@
     --gemini-background-color: #000000 !important;
 }
 
-/* 2. Target specific layout containers */
-html, body, chat-app, main, message-list, .conversation-container, .input-area-container {
+/* 2. Target specific layout containers and strip background images */
+html, body, chat-app, main, message-list, .conversation-container, .input-area-container, div[class*="gradient"], div[class*="background"] {
     background-color: #000000 !important;
+    background-image: none !important; /* Kills the blue/purple landing page glow */
 }
 
 /* 3. Keep user message bubbles slightly visible so they don't blend into the void */
@@ -25,7 +26,13 @@ user-message {
     border: 1px solid #141414 !important;
 }
 
-/* 4. Slim AMOLED Scrollbars (Targeted to avoid wildcard overhead) */
+/* 4. Hide the Upgrade / Advanced Pill in the top right */
+header div:has(a[href*="/advanced"]),
+header div:has(span:contains("Upgrade")) {
+    display: none !important;
+}
+
+/* 5. Slim AMOLED Scrollbars */
 html, body, div {
   scrollbar-width: thin !important;
   scrollbar-color: #222 #000 !important;
