@@ -1,9 +1,9 @@
 /* ==========================================================================
-   CONSUMER GEMINI (gemini.google.com) TRUE AMOLED #000000 (OPTIMIZED)
+   CONSUMER GEMINI (gemini.google.com) TRUE AMOLED #000000 (VALIDATED)
    ========================================================================== */
 
-/* 1. Apply variables to root and nuke landing page gradients */
-:root, body, chat-app {
+/* 1. Global Variables */
+:root, body {
     --md-sys-color-background: #000000 !important;
     --md-sys-color-surface: #000000 !important;
     --md-sys-color-surface-container: #000000 !important;
@@ -14,25 +14,29 @@
     --gemini-background-color: #000000 !important;
 }
 
-/* 2. Target specific layout containers and strip background images */
-html, body, chat-app, main, message-list, .conversation-container, .input-area-container, div[class*="gradient"], div[class*="background"] {
+/* 2. Kill the GPU-Heavy Gradient & Force Black Backgrounds */
+html, body, main, div[class*="gradient"], div[class*="background"] {
+    background-image: none !important;
     background-color: #000000 !important;
-    background-image: none !important; /* Kills the blue/purple landing page glow */
 }
 
-/* 3. Keep user message bubbles slightly visible so they don't blend into the void */
+/* 3. Sidebar, Chat Canvas, and Input Area */
+chat-app, message-list, .conversation-container, .input-area-container, nav, aside {
+    background-color: #000000 !important;
+}
+
+/* 4. Kill the Upgrade Button (Valid CSS Href Targeting) */
+a[href*="/advanced"], a[href*="upgrade"] {
+    display: none !important;
+}
+
+/* 5. User Message Bubbles (Slight contrast so they don't vanish) */
 user-message {
     background-color: #0a0a0a !important;
     border: 1px solid #141414 !important;
 }
 
-/* 4. Hide the Upgrade / Advanced Pill in the top right */
-header div:has(a[href*="/advanced"]),
-header div:has(span:contains("Upgrade")) {
-    display: none !important;
-}
-
-/* 5. Slim AMOLED Scrollbars */
+/* 6. Slim AMOLED Scrollbars */
 html, body, div {
   scrollbar-width: thin !important;
   scrollbar-color: #222 #000 !important;
