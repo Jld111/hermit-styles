@@ -1,46 +1,60 @@
 /* ==========================================================================
-   CONSUMER GEMINI (gemini.google.com) TRUE AMOLED #000000 (VALIDATED)
+   CONSUMER GEMINI (gemini.google.com) TRUE AMOLED #000000 (MINIMALIST CORE)
    ========================================================================== */
 
-/* 1. Global Variables */
-:root, body {
-    --md-sys-color-background: #000000 !important;
-    --md-sys-color-surface: #000000 !important;
-    --md-sys-color-surface-container: #000000 !important;
-    --md-sys-color-surface-container-low: #000000 !important;
-    --md-sys-color-surface-container-lowest: #000000 !important;
-    --md-sys-color-surface-container-high: #0a0a0a !important;
-    --md-sys-color-surface-container-highest: #141414 !important;
-    --gemini-background-color: #000000 !important;
+/* 1. Global Material 3 Surface Variables */
+:root,
+body,
+chat-app {
+  --md-sys-color-background: #000000 !important;
+  --md-sys-color-surface: #000000 !important;
+  --md-sys-color-surface-container: #000000 !important;
+  --md-sys-color-surface-container-low: #000000 !important;
+  --md-sys-color-surface-container-lowest: #000000 !important;
+  --md-sys-color-surface-container-high: #0a0a0a !important;
+  --md-sys-color-surface-container-highest: #141414 !important;
+  --gemini-background-color: #000000 !important;
 }
 
-/* 2. Kill the GPU-Heavy Gradient & Force Black Backgrounds */
-html, body, main, div[class*="gradient"], div[class*="background"] {
-    background-image: none !important;
-    background-color: #000000 !important;
+/* 2. Core Layout & Chat Canvas */
+html,
+body,
+chat-app,
+main,
+message-list,
+.conversation-container,
+.side-nav-container {
+  background-color: #000000 !important;
 }
 
-/* 3. Sidebar, Chat Canvas, and Input Area */
-chat-app, message-list, .conversation-container, .input-area-container, nav, aside {
-    background-color: #000000 !important;
+/* 3. Prompt Input Area */
+.input-area-container,
+rich-textarea {
+  background-color: #050505 !important;
+  border-color: #1a1a1a !important;
 }
 
-/* 4. Kill the Upgrade Button (Valid CSS Href Targeting) */
-a[href*="/advanced"], a[href*="upgrade"] {
-    display: none !important;
-}
-
-/* 5. User Message Bubbles (Slight contrast so they don't vanish) */
+/* 4. User Prompt Bubble Contrast */
 user-message {
-    background-color: #0a0a0a !important;
-    border: 1px solid #141414 !important;
+  background-color: #0a0a0a !important;
+  border: 1px solid #141414 !important;
 }
 
-/* 6. Slim AMOLED Scrollbars */
-html, body, div {
+/* 5. Slim AMOLED Scrollbars */
+html,
+body,
+div {
   scrollbar-width: thin !important;
   scrollbar-color: #222 #000 !important;
 }
-::-webkit-scrollbar { width: 5px !important; height: 5px !important; }
-::-webkit-scrollbar-track { background: #000000 !important; }
-::-webkit-scrollbar-thumb { background: #1c1c1c !important; border-radius: 3px !important; }
+::-webkit-scrollbar {
+  width: 5px !important;
+  height: 5px !important;
+}
+::-webkit-scrollbar-track {
+  background: #000000 !important;
+}
+::-webkit-scrollbar-thumb {
+  background: #1c1c1c !important;
+  border-radius: 3px !important;
+}
