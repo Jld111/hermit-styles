@@ -1,0 +1,35 @@
+/* ==========================================================================
+   CONSUMER GEMINI (gemini.google.com) TRUE AMOLED #000000 (OPTIMIZED)
+   ========================================================================== */
+
+/* 1. Apply variables to root instead of wildcard (*) to prevent CPU layout thrashing during text streaming */
+:root, body, chat-app {
+    --md-sys-color-background: #000000 !important;
+    --md-sys-color-surface: #000000 !important;
+    --md-sys-color-surface-container: #000000 !important;
+    --md-sys-color-surface-container-low: #000000 !important;
+    --md-sys-color-surface-container-lowest: #000000 !important;
+    --md-sys-color-surface-container-high: #0a0a0a !important;
+    --md-sys-color-surface-container-highest: #141414 !important;
+    --gemini-background-color: #000000 !important;
+}
+
+/* 2. Target specific layout containers */
+html, body, chat-app, main, message-list, .conversation-container, .input-area-container {
+    background-color: #000000 !important;
+}
+
+/* 3. Keep user message bubbles slightly visible so they don't blend into the void */
+user-message {
+    background-color: #0a0a0a !important;
+    border: 1px solid #141414 !important;
+}
+
+/* 4. Slim AMOLED Scrollbars (Targeted to avoid wildcard overhead) */
+html, body, div {
+  scrollbar-width: thin !important;
+  scrollbar-color: #222 #000 !important;
+}
+::-webkit-scrollbar { width: 5px !important; height: 5px !important; }
+::-webkit-scrollbar-track { background: #000000 !important; }
+::-webkit-scrollbar-thumb { background: #1c1c1c !important; border-radius: 3px !important; }
